@@ -13,13 +13,20 @@ $transactions = array(
 );
 
 
-// foreach($transactions as $per){
-// foreach($per as $key => $value){
-//     echo 'ID:'. $value . "amount:";
-// }
+foreach($transactions as $per){
+foreach($per as $key => $value){
+    echo $value["debit"]-$value["credit"] . "<br>";
+}
 
-// }
+}
 
-for()
+
+foreach( $transactions as $transaction ) {
+ 
+    $new_transaction[ "amount" ] = abs( $transaction[ "debit" ] - $transaction[ "credit" ] );
+    $new_transactions[] = $new_transaction;
+}
+
+
 
 ?>
